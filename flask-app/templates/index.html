@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Object Detection</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/index.css">
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="../static/index.js"></script>
+  </head>
+  <body>
+    <div class="testbox">
+      <form>
+        <h2>Object detection API</h2>
+        
+        <div class="item">
+          <p>Browse</p>
+          <input
+            id="imageinput"
+            type="file"
+            name="image"
+            onchange="readUrl(this)"
+          />
+        </div>
+        <div class="item">
+          <p>Min Confidence(%)</p>
+          <input type="text" name="conf" id="conf" value="50"/>
+        </div>
+        <div class="item">
+          <p>Max Overlap(%)</p>
+          <input type="text" name="ovl" id="ovl" value="30"/>
+        </div>
+       
+      </form>
+	  
+    </div>
+	<div class="testbox">
+		<div class="btn-block" style="width:100%;">
+			  <button type="submit" id="sendbutton">Run detection</button>
+		</div>
+		
+	</div>
+	<div class="testbox">
+		<div id="link">
+			  <div class="result">RESULT:<br><img  src="" id="download" alt="not found" /></div>
+			  <div class="result">JSON:<br><pre id="json"></pre></div>
+		</div>
+	</div>
+	
+  </body>
+</html>
